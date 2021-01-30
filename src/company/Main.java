@@ -1,4 +1,6 @@
-package stockmarket.company;
+package company;
+
+import stockmarket.StockMarket;
 
 /**
  * @author - johnny850807@gmail.com (Waterball)

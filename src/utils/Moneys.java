@@ -1,4 +1,4 @@
-package stockmarket.utils;
+package utils;
 
 import java.math.BigDecimal;
 

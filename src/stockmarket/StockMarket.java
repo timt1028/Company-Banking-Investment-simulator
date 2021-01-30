@@ -1,4 +1,6 @@
-package stockmarket.company;
+package stockmarket;
+
+import company.Company;
 
 import java.util.Collection;
 import java.util.HashMap;

@@ -1,4 +1,6 @@
-package stockmarket.company;
+package stockmarket;
+
+import company.Investor;
 
 import java.util.Date;
 

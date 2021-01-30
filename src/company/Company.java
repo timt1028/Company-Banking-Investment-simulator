@@ -1,4 +1,4 @@
-package stockmarket.company;
+package company;
 
 import java.util.HashSet;
 import java.util.Set;

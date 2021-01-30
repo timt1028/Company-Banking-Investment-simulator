@@ -1,4 +1,4 @@
-package stockmarket.company;
+package company;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

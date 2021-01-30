@@ -1,4 +1,4 @@
-package stockmarket.company;
+package company;
 
 /**
  * @author - johnny850807@gmail.com (Waterball)

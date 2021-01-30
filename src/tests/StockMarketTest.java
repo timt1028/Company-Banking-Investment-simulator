@@ -6,8 +6,8 @@ import stockmarket.company.Company;
 import stockmarket.company.Investor;
 import stockmarket.company.StockMarket;
 
-import static stockmarket.utils.Randoms.nextSymbol;
-import static stockmarket.utils.Moneys.$;
+import static utils.Randoms.nextSymbol;
+import static utils.Moneys.$;
 
 public class StockMarketTest {
     Investor Waterball = new Investor("Waterball", $("1000000000"));
