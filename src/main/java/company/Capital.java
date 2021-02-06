@@ -3,7 +3,8 @@ package company;
 import java.math.BigDecimal;
 import java.util.Map;
 
-import static stockmarket.utils.Moneys.$;
+import static utils.Moneys.$;
+
 
 /**
  * @author - johnny850807@gmail.com (Waterball)

@@ -19,30 +19,27 @@ public class StockMarket {
     private PriorityQueue<Order> sellOrders =
             new PriorityQueue<>(comparing(Order::getPrice).thenComparing(Order::getDate));
 
-    public void buy(Order order) {
-        buyOrders.add(order);
+    public void transaction(Order order) {
         matchTransaction(order);
     }
 
-    public void sell(Order order) {
-        sellOrders.add(order);
-        matchTransaction(order);
-    }
-
-    public void initialPublicOffering(Company company, String stockSymbol) {
+    public Stock initialPublicOffering(Company company, String stockSymbol) {
         if (stocks.containsKey(stockSymbol)) {
             throw new IllegalArgumentException("Stock symbol must not be duplicate.");
         }
-        stocks.put(stockSymbol, new Stock(stockSymbol, company));
+        Stock stock = new Stock(stockSymbol, company);
+        stocks.put(stockSymbol, stock);
+        return stock;
     }
 
+    // 逐筆撮合
     private void matchTransaction(Order newOrder) {
         var orders = newOrder.isBuy() ? sellOrders : buyOrders;
         orders.stream()
-                .takeWhile(o -> !newOrder.isDeal())
+                .takeWhile(o -> !newOrder.isCompleted())
                 .forEach(newOrder::deal);
-        orders.removeIf(Order::isDeal);
-        if (!newOrder.isDeal()) {
+        orders.removeIf(Order::isCompleted);
+        if (!newOrder.isCompleted()) {
             appendPendingOrder(newOrder);
         }
     }
@@ -62,5 +59,4 @@ public class StockMarket {
     public void printStocks() {
         getStocks().forEach(System.out::println);
     }
-
 }

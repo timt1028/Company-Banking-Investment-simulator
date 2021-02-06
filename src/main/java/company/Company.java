@@ -4,12 +4,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * TODO
  * @author - johnny850807@gmail.com (Waterball)
  */
 public class Company {
-    private Set<Investor> investors = new HashSet<>();
-    private String name;
-    private Capital capital;
+    protected Set<Investor> investors = new HashSet<>();
+    protected String name;
+    protected Capital capital;
 
     public Company(String name, Capital capital) {
         this.name = name;
@@ -43,4 +44,5 @@ public class Company {
     public String getName() {
         return name;
     }
+
 }

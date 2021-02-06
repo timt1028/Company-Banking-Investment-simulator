@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.String.format;
-import static stockmarket.utils.Moneys.$;
+import static utils.Moneys.$;
 
 /**
  * @author - johnny850807@gmail.com (Waterball)

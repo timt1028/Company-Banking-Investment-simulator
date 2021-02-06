@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.math.RoundingMode.*;
+import static java.math.RoundingMode.FLOOR;
 import static java.util.stream.Collectors.toMap;
-import static stockmarket.utils.Moneys.$;
+import static utils.Moneys.$;
 
 /**
  * @author - johnny850807@gmail.com (Waterball)
@@ -23,7 +23,7 @@ public class CoFounding {
         this.companyName = companyName;
     }
 
-    public CoFounding invest(Investor investor, BigDecimal cash) {
+    public CoFounding cofounder(Investor investor, BigDecimal cash) {
         investments.put(investor, cash);
         return this;
     }
